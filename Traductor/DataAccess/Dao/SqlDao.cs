@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +17,7 @@ namespace DataAccess.Dao
 
         private SqlDao()
         {
-            CONNECTION_STRING = ConfigurationManager.ConnectionStrings["CONN_STRING"].ConnectionString;
+            CONNECTION_STRING =ConfigurationManager.ConnectionStrings["CONN_STRING"].ConnectionString;
         }
 
         //IMPLEMENTA EL PATRON LLAMADO SINGLETON
@@ -84,5 +87,4 @@ namespace DataAccess.Dao
             return lstResult;
         }
     }
-}
 }
